@@ -13,13 +13,16 @@
       left: -100%;
       top: 0;
       overflow: auto;
-      padding: toRem(110) toRem(15) toRem(15) toRem(30);
+      padding-top: toRem(110);
+      padding-bottom: toRem(30);
+      @include adaptiveValue("padding-left", 50, 15);
+      @include adaptiveValue("padding-left", 50, 15);
       transition: left 0.3s;
       &::before {
         content: "";
         position: fixed;
         width: 100%;
-        height: toRem(70);
+        height: toRem(106);
         left: -100%;
         top: 0;
         background-color: #fff;
@@ -35,7 +38,10 @@
       }
     }
     @media (max-width: toEm(640)) {
-      padding: toRem(90) toRem(15) toRem(15) toRem(30);
+      padding: toRem(90);
+      &::before {
+        height: toRem(50);
+      }
     }
   }
 

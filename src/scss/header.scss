@@ -32,19 +32,22 @@
     @media (max-width: toEm(380)) {
       font-size: toRem(20);
     }
-
-    .menu-open & {
-      color: #000;
+    @media (max-width: $mobile) {
+      .menu-open & {
+        color: #000;
+      }
     }
   }
 
   &__book {
     justify-self: end;
     transition: color 0.3s;
-    .menu-open & {
-      color: #000;
+    @media (max-width: $mobile) {
+      .menu-open & {
+        color: #000;
+      }
     }
-    @media (max-width: toEm(640)) {
+    @media (max-width: toEm(380)) {
       font-size: toRem(14);
     }
   }
@@ -77,10 +80,16 @@
     color: #fff;
     font-weight: 500;
     letter-spacing: toRem(-0.4);
+    transition: color 0.3s;
     line-height: 1.31; /*21/16*/
     @media (max-width: $mobile) {
       color: #000;
       font-size: toRem(32);
+    }
+    @media (any-hover) {
+      &:hover {
+        color: $redColor;
+      }
     }
   }
 }

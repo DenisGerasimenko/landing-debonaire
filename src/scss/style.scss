@@ -7,7 +7,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lexend+Deca:regular&display=swap");
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:regular,500,700&display=swap");
 
-
 // Підключити, якщо є локальні файли шрифтів
 // @import "fonts/fonts";
 
@@ -25,6 +24,7 @@ $fontFamily: "DM Sans";
 
 // Основні кольори
 $mainColor: #6e645f; // Колір шрифту за замовчуванням
+$redColor: #f95454; // Колір шрифту за замовчуванням
 
 // Палітра кольорів
 // @import "base/colors-palette";
@@ -46,7 +46,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поїнти
 $pc: toEm(
-                $containerWidth
+  $containerWidth
 ); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
 $tablet: toEm(991.98); // Планшети, деякі телефони в горизонтальному положенні
 $mobile: toEm(767.98); // Телефони L
@@ -121,14 +121,14 @@ body {
         padding: 0 toRem(math.div($containerPadding, 2));
       } @else {
         @include adaptiveValue(
-                        "padding-left",
-                        math.div($containerPadding, 2),
-                        15
+          "padding-left",
+          math.div($containerPadding, 2),
+          15
         );
         @include adaptiveValue(
-                        "padding-right",
-                        math.div($containerPadding, 2),
-                        15
+          "padding-right",
+          math.div($containerPadding, 2),
+          15
         );
       }
     }
